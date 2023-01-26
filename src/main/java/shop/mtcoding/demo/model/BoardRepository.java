@@ -15,7 +15,8 @@ public interface BoardRepository {
     public List<Board> findAll();
 
     // Update
-    public int update();
+    public int update(@Param("username") String username, @Param("password") String password,
+            @Param("email") String email);
 
     // Delete
     public int delete();

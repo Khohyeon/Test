@@ -12,19 +12,20 @@
         <style>
             h1 {
                 background-color: rgb(150, 150, 150);
-                display: flexbox;
+                display: flex;
+                justify-content: center;
+            }
+
+            .flex_box {
+                display: flex;
+                justify-content: center;
             }
 
             .footerBox {
                 background-color: rgb(150, 150, 150);
-                display: flexbox;
+                display: flex;
+                justify-content: center;
             }
-
-            body {
-                display: flexbox;
-                text-align: center;
-            }
-            
         </style>
 
 
