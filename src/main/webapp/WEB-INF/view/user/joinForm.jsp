@@ -23,12 +23,14 @@
                 <table border="1">
                     <tr>
                         <td>유저네임</td>
-                        <td>패스워드</td>
-                        <td>이메일</td>
+                        <td><input type="text" name="username" placeholder="Enter username" required></td><br />
                     </tr>
                     <tr>
-                        <td><input type="text" name="username" placeholder="Enter username" required></td><br />
+                        <td>패스워드</td>
                         <td><input type="password" name="password" placeholder="Enter password" required></td><br />
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
                         <td><input type="email" name="email" placeholder="Enter email" required></td><br />
                     </tr>
                 </table>

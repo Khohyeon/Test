@@ -88,7 +88,7 @@ public class UserCotroller {
         }
         int result = userRepository.updateByUsernamePasswordEmail(sessionId.getId(), username, password, email);
         if (result == 1) {
-            return "redirect:/listForm";
+            return "redirect:/list";
         } else {
             return "redirect:/user/updateForm";
         }

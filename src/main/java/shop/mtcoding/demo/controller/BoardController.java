@@ -24,24 +24,25 @@ public class BoardController {
     @Autowired
     private HttpSession session;
 
-    @GetMapping("/listForm")
-    public String listForm(Model model) {
-        List<Board> boardList = boardRepository.findAll();
-        model.addAttribute("boardList", boardList);
-        return "board/list";
-    }
+    // @GetMapping("/listForm")
+    // public String listForm(Model model) {
+    // List<Board> boardList = boardRepository.findAll();
+    // model.addAttribute("boardList", boardList);
+    // return "board/list";
+    // }
 
     @GetMapping("/list")
-    public String list() {
+    public String list(Model model) {
         User sessionId = (User) session.getAttribute("principal");
         if (sessionId == null) {
             return "redirect:/notfound";
         }
-        Board board = boardRepository.findList(sessionId.getId());
-        if (board == null) {
+        List<Board> boardList = boardRepository.findList(sessionId.getId());
+        model.addAttribute("boardList", boardList);
+        if (boardList == null) {
             return "redirect:/notfound";
         } else {
-            return "redirect:/listForm";
+            return "board/list";
         }
         // System.out.println("디버그" + board);
     }

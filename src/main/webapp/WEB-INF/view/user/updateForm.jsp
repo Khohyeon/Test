@@ -18,21 +18,23 @@
             </c:choose>
         </div>
         <div class="flex_box">
-            <table border="1">
-                <form action="/update" method="post">
+            <form action="/update" method="post">
+                <table border="1">
                     <tr>
-                        <th>유저이름</th>
-                        <th>패스워드</th>
-                        <th>이메일</th>
-                    </tr>
-                    <tr>
+                        <td>유저네임</td>
                         <td><input type="text" name="username" value="${user.username}"></td><br />
-                        <td><input type="password" name="password" value="${user.password}"></td><br />
-                        <td><input type="email" name="email" value="${user.email}"></td><br />
-                        <button type="submit">회원수정완료</button>
                     </tr>
-                </form>
+                    <tr>
+                        <td>패스워드</td>
+                        <td><input type="password" name="password" value="${user.password}"></td><br />
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td><input type="email" name="email" value="${user.email}"></td><br />
+                    </tr>
+                </table>
+                <input type="submit" value="회원수정완료">
+            </form>
 
-            </table>
         </div>
         <%@ include file="../layout/footer.jsp" %>

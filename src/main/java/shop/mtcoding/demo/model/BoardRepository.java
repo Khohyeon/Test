@@ -21,6 +21,6 @@ public interface BoardRepository {
     // Delete
     public int delete();
 
-    public Board findList(@Param("id") int id);
+    public List<Board> findList(@Param("id") int id);
 
 }

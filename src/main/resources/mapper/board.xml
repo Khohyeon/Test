@@ -7,7 +7,7 @@
    </select >
 
    <select id="findList" resultType="shop.mtcoding.demo.model.Board">
-   select * from board_tb where user_id = #{id} order by #{id} desc
+   select * from board_tb where user_id = #{id} order by 1 desc
    </select>
 
    <!-- <select id="findByUserId" resultType="shop.mtcoding.demo.dto.PurchaseAllDto">
