@@ -55,8 +55,7 @@ public class UserCotroller {
         if (user == null) {
             return "redirect:/loginForm";
         } else {
-            // 요청헤더 : Cookie
-            // 응답헤더 : Set-Cookie
+
             if (remember == null) {
                 remember = "";
             }
@@ -67,10 +66,10 @@ public class UserCotroller {
                 Cookie cookie = new Cookie("remember", "");
                 cookie.setMaxAge(0);
                 response.addCookie(cookie);
-
             }
             session.setAttribute("principal", user);
-            return "board/list";
+
+            return "redirect:/list";
         }
 
     }

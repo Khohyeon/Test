@@ -3,6 +3,17 @@
     <%@ include file="../layout/header.jsp" %>
         <h1>로그인 페이지</h1>
         <hr />
+        <c:choose>
+                    <c:when test="${principal == null}">
+                        <a href="/loginForm">로그인</a>
+                        <a href="/joinForm">회원가입</a>
+                    </c:when>
+
+                    <c:otherwise>
+                        <a href="/update">회원정보</a>
+                        <a href="/logout">로그아웃</a>
+                    </c:otherwise>
+                </c:choose>
 
         <form action="/login" method="post">
             <input type="text" name="username" value="${remember}" placeholder="Enter username" required><br />

@@ -10,7 +10,7 @@
                     </c:when>
 
                     <c:otherwise>
-                        <a href="/purchase">회원정보</a>
+                        <a href="/update">회원정보</a>
                         <a href="/logout">로그아웃</a>
                     </c:otherwise>
                 </c:choose>

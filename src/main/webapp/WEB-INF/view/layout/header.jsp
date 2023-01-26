@@ -21,8 +21,10 @@
             }
 
             body {
+                display: flexbox;
                 text-align: center;
             }
+            
         </style>
 
 

@@ -8,9 +8,9 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Board {
-    private int id;
+    private Integer id;
     private String title;
-    private int userId;
+    private Integer userId;
     private Timestamp createdAt;
 
 }
